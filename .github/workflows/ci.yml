@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -28,7 +28,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests/api/test_patient_api.py --html=report.html  # Run your tests and generate a report
+        pytest tests/api/test_patient_api.py --html=report.html  
 
     - name: Upload test report
       uses: actions/upload-artifact@v2
